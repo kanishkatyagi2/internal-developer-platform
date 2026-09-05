@@ -31,6 +31,7 @@ documentation, or monitoring for each new service.
 | ID     | Requirement                                                                                   |
 |--------|------------------------------------------------------------------------------------------------|
 | NFR-1  | Entire stack runs on local hardware (VirtualBox VMs); no paid cloud services required           |
+| NFR-1a | Development host has only 8 GB total RAM — see [ADR-005](adr/005-hardware-constraint-8gb-ram.md) for the resulting single-node, incremental-component, stop-when-idle constraints that apply to every phase from here forward |
 | NFR-2  | Every architectural decision with more than one reasonable option is documented as an ADR       |
 | NFR-3  | Every phase is independently verifiable (explicit verification steps, not "trust it works")     |
 | NFR-4  | Documentation is written as the project is built, not reconstructed afterward                   |

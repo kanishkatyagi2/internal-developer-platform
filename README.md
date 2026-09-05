@@ -55,6 +55,15 @@ practices, rather than requiring a platform engineer to hand-configure each one.
 
 Full problem statement and architecture reasoning: [docs/requirements.md](docs/requirements.md).
 
+## Hardware Constraint
+
+Built on an 8 GB RAM development laptop (Windows host, Ubuntu Server VM guest running
+k3s). This is a hard constraint, not a soft preference — see
+[ADR-005](docs/adr/005-hardware-constraint-8gb-ram.md) for how it shapes VM sizing,
+single-node-only clustering, incremental component rollout, and the practice of
+stopping components that aren't the current phase's focus rather than running the full
+stack concurrently.
+
 ## Local Lab vs. Production — An Honest Disclaimer
 
 This project runs entirely on local VirtualBox VMs, not cloud infrastructure. Where a
