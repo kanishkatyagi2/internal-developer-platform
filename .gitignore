@@ -1,0 +1,30 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfvars
+crash.log
+
+# Secrets - never commit real secrets
+*.env
+.env.*
+secrets/
+*.pem
+*.key
+kubeconfig*
+
+# Node (for future Backstage app)
+node_modules/
+npm-debug.log*
+
+# Helm
+*.tgz
