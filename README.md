@@ -98,8 +98,8 @@ See [docs/requirements.md](docs/requirements.md) for the functional requirements
 phase satisfies. Phase-by-phase documentation lives under `docs/` as it's produced.
 
 - [x] Phase 0 — Architecture and requirements
-- [ ] Phase 1 — Local Kubernetes foundation
-- [ ] Phase 2 — Containerized application
+- [x] Phase 1 — Local Kubernetes foundation ([details](docs/phase-1-k3s-foundation.md))
+- [x] Phase 2 — Containerized application ([details](docs/phase-2-containerized-application.md))
 - [ ] Phase 3 — Kubernetes deployment
 - [ ] Phase 4 — Helm-based reusable deployment
 - [ ] Phase 5 — CI pipeline
