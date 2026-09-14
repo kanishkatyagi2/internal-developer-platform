@@ -4,7 +4,7 @@ A self-service Internal Developer Platform, built as a portfolio project, that l
 developer scaffold, deploy, and observe a standardized service without manually
 configuring repositories, CI/CD, Kubernetes, or monitoring.
 
-> **Status:** In progress — Phase 0 (Architecture & Requirements) complete.
+> **Status:** In progress — Phase 4 (Helm-based reusable deployment) complete.
 > See [docs/requirements.md](docs/requirements.md) for the full functional scope and
 > [docs/adr/](docs/adr/) for architectural decisions.
 
@@ -101,8 +101,7 @@ phase satisfies. Phase-by-phase documentation lives under `docs/` as it's produc
 - [x] Phase 1 — Local Kubernetes foundation ([details](docs/phase-1-k3s-foundation.md))
 - [x] Phase 2 — Containerized application ([details](docs/phase-2-containerized-application.md))
 - [x] Phase 3 — Kubernetes deployment ([details](docs/phase-3-kubernetes-deployment.md))
-- [ ] Phase 4 — Helm-based reusable deployment
-- [ ] Phase 5 — CI pipeline
+- [x] Phase 4 — Helm-based reusable deployment ([details](docs/phase-4-helm-chart.md))- [ ] Phase 5 — CI pipeline
 - [ ] Phase 6 — Container registry
 - [ ] Phase 7 — GitOps / Argo CD
 - [ ] Phase 8 — Backstage developer portal

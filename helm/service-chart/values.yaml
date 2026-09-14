@@ -1,0 +1,35 @@
+nameOverride: ""
+fullnameOverride: ""
+
+image:
+  repository: hello-service
+  tag: "0.1.0"
+  pullPolicy: Never   # temporary — until Phase 6 (GHCR)
+
+replicaCount: 1
+
+service:
+  type: NodePort
+  port: 80
+  targetPort: 3000
+  nodePort: 30080
+
+resources:
+  requests:
+    cpu: "50m"
+    memory: "64Mi"
+  limits:
+    cpu: "100m"
+    memory: "128Mi"
+
+livenessProbe:
+  path: /healthz
+  port: 3000
+  initialDelaySeconds: 5
+  periodSeconds: 10
+
+readinessProbe:
+  path: /healthz
+  port: 3000
+  initialDelaySeconds: 2
+  periodSeconds: 5
