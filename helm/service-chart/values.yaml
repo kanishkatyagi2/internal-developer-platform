@@ -1,8 +1,8 @@
-nameOverride: ""
+nameOverride: "hello-service"
 fullnameOverride: ""
 
 image:
-  repository: hello-service
+  repository: docker.io/library/hello-service
   tag: "0.1.0"
   pullPolicy: Never   # temporary — until Phase 6 (GHCR)
 
