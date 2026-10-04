@@ -2,9 +2,12 @@ nameOverride: "hello-service"
 fullnameOverride: ""
 
 image:
-  repository: docker.io/library/hello-service
-  tag: "0.1.0"
-  pullPolicy: Never   # temporary — until Phase 6 (GHCR)
+  repository: ghcr.io/kanishkatyagi2/hello-service
+  tag: "3ec24560928b28caf85f506c1fa6166ac2f69d35"
+  pullPolicy: IfNotPresent
+
+imagePullSecrets:
+  - name: ghcr-pull-secret
 
 replicaCount: 1
 
