@@ -4,7 +4,7 @@ A self-service Internal Developer Platform, built as a portfolio project, that l
 developer scaffold, deploy, and observe a standardized service without manually
 configuring repositories, CI/CD, Kubernetes, or monitoring.
 
-> **Status:** In progress — Phase 5 (CI pipeline) complete.
+> **Status:** In progress — Phase 6 (Container registry) complete.
 > See [docs/requirements.md](docs/requirements.md) for the full functional scope and
 > [docs/adr/](docs/adr/) for architectural decisions.
 
@@ -103,7 +103,7 @@ phase satisfies. Phase-by-phase documentation lives under `docs/` as it's produc
 - [x] Phase 3 — Kubernetes deployment ([details](docs/phase-3-kubernetes-deployment.md))
 - [x] Phase 4 — Helm-based reusable deployment ([details](docs/phase-4-helm-chart.md))
 - [x] Phase 5 — CI pipeline ([details](https://github.com/kanishkatyagi2/hello-service/blob/main/docs/phase-5-ci-pipeline.md))
-- [ ] Phase 6 — Container registry
+- [x] Phase 6 — Container registry ([details](docs/phase-6-container-registry.md))
 - [ ] Phase 7 — GitOps / Argo CD
 - [ ] Phase 8 — Backstage developer portal
 - [ ] Phase 9 — Golden Path / service templates
