@@ -1,0 +1,51 @@
+# Argo CD Helm values: chart argo/argo-cd 10.9.6 (Argo CD v3.5.3)
+# ADR-005: 8GB laptop / 3GB VM. Trim what isn't needed; explicit resources on everything.
+
+# Keep CRDs when the release is uninstalled. Deleting the CRDs would delete
+# every Application object with them. (Chart default, stated on purpose.)
+crds:
+  install: true
+  keep: true
+
+# Not needed now: we use the local admin account, no SSO.
+dex:
+  enabled: false
+
+# Not needed now: no notification channels. Revisit with observability.
+notifications:
+  enabled: false
+
+# Memory limits are strict (OOM protects the node). CPU limits are generous:
+# Go/Node startup is CPU-bursty, and a tight CPU cap caused slow-start probe
+# failures on hello-service.
+controller:
+  resources:
+    requests: { cpu: 100m, memory: 192Mi }
+    limits:   { cpu: "1",  memory: 512Mi }
+
+repoServer:
+  resources:
+    requests: { cpu: 50m,  memory: 128Mi }
+    limits:   { cpu: 500m, memory: 256Mi }
+
+server:
+  resources:
+    requests: { cpu: 50m,  memory: 64Mi }
+    limits:   { cpu: 250m, memory: 192Mi }
+
+redis:
+  resources:
+    requests: { cpu: 25m,  memory: 32Mi }
+    limits:   { cpu: 100m, memory: 128Mi }
+
+# No off switch in this chart version; keep it small.
+applicationSet:
+  resources:
+    requests: { cpu: 25m,  memory: 48Mi }
+    limits:   { cpu: 100m, memory: 128Mi }
+
+# One-shot Job that creates the Redis password secret, then exits.
+redisSecretInit:
+  resources:
+    requests: { cpu: 10m,  memory: 32Mi }
+    limits:   { cpu: 100m, memory: 64Mi }
